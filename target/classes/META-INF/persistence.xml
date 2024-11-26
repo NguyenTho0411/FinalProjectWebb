@@ -5,9 +5,9 @@
     <persistence-unit name="BookStoreWebsite">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bookstoredb"/>
-            <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="0411"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://azure-server-murach-123.mysql.database.azure.com/bookstoredb"/>
+            <property name="jakarta.persistence.jdbc.user" value="ductho"/>
+            <property name="jakarta.persistence.jdbc.password" value="Tho0411@"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <!-- Optional Hibernate Properties -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>

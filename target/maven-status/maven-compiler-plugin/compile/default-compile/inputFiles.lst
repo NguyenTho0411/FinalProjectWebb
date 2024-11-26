@@ -17,15 +17,18 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\mycompany\bookstorewebsite\Ja
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\ListCustomersServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\CommonUtility.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Review.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\ShowCustomerProfileServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\UpdateCustomerServices.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\CustomerLoginServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\BookDAO.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\user\EditUserServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\AdminLogoutServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\book\ViewBookDetailServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\ShowRegisterServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Book.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\CustomerServices.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\DeleteCustomerServlet.java
-E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\CustomerLoginServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\CustomerRegisterServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\user\CreateUserServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\CustomerDAO.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\BookOrder.java
@@ -34,8 +37,8 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\bo
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\CreateCustomerServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\HomeServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\JpaDAO.java
-E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\CustomerLogoutServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\AdminLoginServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\CustomerLoginServlets.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\GenericDAO.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\user\DeleteUserServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\CommonFilter.java
@@ -46,6 +49,7 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Users.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\EditBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\ListBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\BookServices.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\CustomerLogoutServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\category\EditCategoryServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\NewCustomerServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\AdminLoginFilter.java
