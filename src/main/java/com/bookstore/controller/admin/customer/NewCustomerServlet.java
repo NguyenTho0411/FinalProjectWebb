@@ -4,6 +4,7 @@
  */
 package com.bookstore.controller.admin.customer;
 
+import com.bookstore.services.CommonUtility;
 import com.bookstore.services.CustomerServices;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
@@ -24,6 +25,7 @@ public class NewCustomerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        CommonUtility.generateCountryList(request);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer_form.jsp");
         requestDispatcher.forward(request, response);
     }

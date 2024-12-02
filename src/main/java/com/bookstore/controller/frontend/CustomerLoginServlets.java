@@ -4,6 +4,7 @@
  */
 package com.bookstore.controller.frontend;
 
+import jakarta.persistence.Query;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -25,7 +26,9 @@ import jakarta.servlet.http.HttpSession;
  */
 @WebFilter(filterName = "CustomerLoginServlets", urlPatterns = {"/*"})
 public class CustomerLoginServlets implements Filter {
-  
+    private static final String[] loginRequiredURLs = {
+            "/view_profile","/edit_profile","/update_profile","/write_review","/checkout","/place_order","/view_orders","/show_order_detail"
+    };
     public CustomerLoginServlets() {
     }
 
@@ -42,15 +45,29 @@ public class CustomerLoginServlets implements Filter {
         if (path.startsWith("/admin/")) {
             fc.doFilter(sr, sr1);
         }
+        String loginURL = request.getRequestURL().toString();
         boolean t = session != null && session.getAttribute("loggedCustomer")!=null;
-        if(!t && path.startsWith("/view_profile")){
+        if(!t && isLoginRequired( loginURL)){
             String url ="frontend/login.jsp";
+            String query = request.getQueryString();
+            if(query!= null){
+                loginURL = loginURL.concat("?").concat(query);
+            }
+            request.getSession().setAttribute("loginURL",loginURL);
             RequestDispatcher requestDis = request.getRequestDispatcher(url);
             requestDis.forward(sr, sr1);
         }
         else{
             fc.doFilter(sr, sr1);
         }
+    }
+    private Boolean isLoginRequired(String loginURL){
+        for(String  loginRequiredURL :  loginRequiredURLs){
+            if(loginURL.contains( loginRequiredURL)){
+                return true;
+            }
+        }
+        return false;
     }
 
         @Override

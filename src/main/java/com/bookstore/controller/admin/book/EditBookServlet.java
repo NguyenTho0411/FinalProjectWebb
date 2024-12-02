@@ -8,6 +8,7 @@ import com.bookstore.services.BookServices;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,12 +21,16 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "EditBookServlet", urlPatterns = {"/admin/edit_book"})
 public class EditBookServlet extends HttpServlet {
 
+    private static final long serialVersionUID = 1L;
+
+    public EditBookServlet() {
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        BookServices book = new BookServices(request,response);
+        BookServices book = new BookServices(request, response);
         book.editBook();
     }
-
 
 }

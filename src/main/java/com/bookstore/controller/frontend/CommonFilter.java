@@ -32,13 +32,10 @@ public class CommonFilter implements Filter {
     public CommonFilter() {
         categoryDAO = new CategoryDAO();
     }
+	public void destroy() {
+	}
 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
 
-    @Override
     public void doFilter(ServletRequest sr, ServletResponse sr1, FilterChain fc) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) sr;
         String path = request.getRequestURI().substring(request.getContextPath().length());
@@ -49,10 +46,8 @@ public class CommonFilter implements Filter {
 
         fc.doFilter(sr, sr1);
     }
+	public void init(FilterConfig fConfig) throws ServletException {
+	}
 
-    @Override
-    public void destroy() {
-        Filter.super.destroy(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
 
 }

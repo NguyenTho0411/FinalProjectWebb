@@ -39,17 +39,21 @@ public class BookServices {
     }
 
     public void listBooks(String message) throws ServletException, IOException {
-        List<Book> listBooks = bookDAO.listAll();
-        request.setAttribute("listBooks", listBooks);
+        if (!response.isCommitted()) {
+            List<Book> listBooks = bookDAO.listAll();
+            request.setAttribute("listBooks", listBooks);
 
-        if (message != null) {
-            request.setAttribute("message", message);
+            if (message != null) {
+                request.setAttribute("message", message);
+            }
+
+            String listPage = "book_list.jsp";
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(listPage);
+            requestDispatcher.forward(request, response);
+        } else {
+            // Handle the case when the response is already committed
+            System.out.println("Response already committed!");
         }
-
-        String listPage = "book_list.jsp";
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(listPage);
-        requestDispatcher.forward(request, response);
-
     }
 
     public void showBookNewForm() throws ServletException, IOException {
@@ -85,7 +89,7 @@ public class BookServices {
         }
     }
 
-    public void readBookFields(Book book) throws ServletException, IOException , java.text.ParseException{
+    public void readBookFields(Book book) throws ServletException, IOException, java.text.ParseException {
         String title = request.getParameter("title");
         String author = request.getParameter("author");
         String description = request.getParameter("description");
@@ -130,17 +134,39 @@ public class BookServices {
     }
 
     public void editBook() throws ServletException, IOException {
-        Integer bookId = Integer.parseInt(request.getParameter("id"));
-        Book book = bookDAO.get(bookId);
-        List<Category> listCategory = categoryDAO.listAll();
+        try {
+            Integer bookId = Integer.parseInt(request.getParameter("id"));
+            Book book = bookDAO.get(bookId);
+            List<Category> listCategory = categoryDAO.listAll();
 
-        request.setAttribute("book", book);
-        request.setAttribute("listCategory", listCategory);
+            if (book == null) {
+                // Xử lý khi book không tồn tại
+                String errorMessage = "The book with ID " + bookId + " does not exist.";
+                request.setAttribute("message", errorMessage);
+                listBooks(errorMessage);
+                return;
+            }
 
-        String editPage = "book_form.jsp";
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher(editPage);
-        requestDispatcher.forward(request, response);
+            // Đặt các thuộc tính cho request
+            request.setAttribute("book", book);
+            request.setAttribute("listCategory", listCategory);
 
+            // Chuyển hướng tới form chỉnh sửa
+            String editPage = "book_form.jsp";
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(editPage);
+            requestDispatcher.forward(request, response);
+        } catch (NumberFormatException e) {
+            // Xử lý lỗi định dạng ID
+            String errorMessage = "Invalid book ID.";
+            request.setAttribute("message", errorMessage);
+            listBooks(errorMessage);
+        } catch (Exception e) {
+            // Log lỗi và hiển thị thông báo lỗi
+            e.printStackTrace();
+            String errorMessage = "An error occurred while editing the book.";
+            request.setAttribute("message", errorMessage);
+            listBooks(errorMessage);
+        }
     }
 
     public void updateBook() throws ServletException, IOException, ParseException {
