@@ -50,7 +50,7 @@ public class AdminHomeServlet extends HttpServlet {
         request.setAttribute("listMostRecentSales",listMostRecentSales);
         List<Review> listMostRecentReviews = review.listRecentReview();
         request.setAttribute("listMostRecentReviews", listMostRecentReviews);
-        RequestDispatcher requestDis = request.getRequestDispatcher("../admin/index.jsp");
+        RequestDispatcher requestDis = request.getRequestDispatcher("index.jsp");
         requestDis.forward(request, response);
     }
 
