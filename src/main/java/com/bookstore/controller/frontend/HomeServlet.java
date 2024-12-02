@@ -21,7 +21,7 @@ import java.util.List;
  *
  * @author DELL
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/home"})
+@WebServlet(name = "HomeServlet", urlPatterns = {""})
 public class HomeServlet extends HttpServlet {
 
     @Override
