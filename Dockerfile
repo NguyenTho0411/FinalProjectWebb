@@ -5,7 +5,7 @@ FROM tomcat:10.0-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/ROOT/*
 
 # Sao chép file WAR vào thư mục webapps của Tomcat
-COPY target/BookStoreWebsite-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/GIT.war
+COPY target/BookStoreWebsite-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/BookStoreWebsite.war
 
 # Mở cổng 8080
 EXPOSE 8080
