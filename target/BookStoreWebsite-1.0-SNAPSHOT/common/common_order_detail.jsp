@@ -47,7 +47,7 @@
 				</div>
 				<div class="row">
 					<div class="col"><b>Last Name: </b></div>
-					<div class="col">${order.firstname}</div>
+					<div class="col">${order.lastname}</div>
 				</div>			
 				<div class="row">
 					<div class="col"><b>Phone: </b></div>

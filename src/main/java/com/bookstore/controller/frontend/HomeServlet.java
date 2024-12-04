@@ -35,7 +35,7 @@ public class HomeServlet extends HttpServlet {
         request.setAttribute("listBestSellingBooks", listBestSellingBooks);
         List<Book> listFavoredBooks = bookDAO.listMostFavoredBooks();
         request.setAttribute("listFavoredBooks", listFavoredBooks);
-        String url = "index.jsp";
+        String url = "/frontend/index.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }

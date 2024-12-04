@@ -94,7 +94,8 @@ public class BookServices {
         String author = request.getParameter("author");
         String description = request.getParameter("description");
         String isbn = request.getParameter("isbn");
-        float price = Float.parseFloat(request.getParameter("price"));
+         float price = 100;
+                price = Float.parseFloat(request.getParameter("price"));
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date publishDate = null;

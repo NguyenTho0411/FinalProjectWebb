@@ -11,6 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import com.bookstore.dao.CustomerDAO;
 import com.bookstore.entity.Customer;
+import com.murach.util.MailUtilLocal;
+import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpSession;
 
 public class CustomerServices {
@@ -101,6 +103,7 @@ public class CustomerServices {
 
     public void registerCustomer() throws ServletException, IOException {
         String email = request.getParameter("email");
+        String firstname = request.getParameter("firstname");
         Customer existCustomer = customerDAO.findByEmail(email);
         String message = "";
 
@@ -115,6 +118,32 @@ public class CustomerServices {
 
             message = "You have registered successfully! Thank you.<br/>"
                     + "<a href='login'>Click here</a> to login";
+
+            String to = email;
+            String from = "nguyenhuuductho0411@gmail.com";
+            String subject = "Welcome to becoming a customer in our BookStoreWebistie";
+            String body = "Dear " + firstname + ",\n\n"
+                    + "Thanks for joining our BookStoreWebsite. We'll make sure to send "
+                    + "you announcements about new products and promotions.\n"
+                    + "Have a great day and thanks again!\n\n"
+                    + "Nguyen Huu Duc Tho\n"
+                    + "THQT Web Project\n"
+                    + "From THQT BOOKSTORE";
+            boolean isBodyHTML = false;
+
+            try {
+                MailUtilLocal.sendMail(to, from, subject, body, isBodyHTML);
+//                MailUtilGmail.sendMail(to,from,subject,body,isBodyHTML);
+            } catch (MessagingException e) {
+                String errorMessage
+                        = "ERROR: Unable to send email. "
+                        + "Check Tomcat logs for details.<br>"
+                        + "NOTE: You may need to configure your system "
+                        + "as described in chapter 14.<br>"
+                        + "ERROR MESSAGE: " + e.getMessage();
+                request.setAttribute("errorMessage", errorMessage);
+            }
+
         }
 
         String messagePage = "frontend/message.jsp";
