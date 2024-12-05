@@ -25,10 +25,10 @@ public class AdminLogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        request.getSession().removeAttribute("userEmail");
+        request.getSession().removeAttribute("useremail");
         String message = "You have logged out successfully!";
         request.setAttribute("message", message);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("login.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("../admin/login.jsp");
         requestDispatcher.forward(request, response);
     }
 

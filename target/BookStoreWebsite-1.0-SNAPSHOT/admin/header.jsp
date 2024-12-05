@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col text-center">
 		<a href="${pageContext.request.contextPath}/admin/">
-			<img src="../images/BookstoreAdminLogo.png" class="img-fluid" />
+			<img src="../images/BookstoreAdminLogo.jpg" class="img-fluid" />
 		</a>
 	</div>
 </div>

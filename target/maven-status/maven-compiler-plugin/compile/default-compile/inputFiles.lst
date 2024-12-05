@@ -1,4 +1,5 @@
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\category\UpdateCategoryServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\murach\util\MailUtilYahoo.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\AdminHomeServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\book\ViewBookByCategoryServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\UserDAO.java
@@ -15,12 +16,14 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\ca
 E:\FinalProject\BookStoreWebsite\src\main\java\com\mycompany\bookstorewebsite\resources\JakartaEE10Resource.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\NewBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\book\SearchBookServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\order\ExecutePaymentServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Customer.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\mycompany\bookstorewebsite\JakartaRestConfiguration.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\ListCustomersServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\CommonUtility.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\order\ShowAddBookFormServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\order\PlaceOrderServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\order\ReviewPaymentServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Review.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\order\OrderDetailForAdminServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\EditCustomerProfileServlet.java
@@ -31,6 +34,7 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\or
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\customer\CustomerLoginServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\BookDAO.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\user\EditUserServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\murach\util\MailUtilLocal.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\AdminLogoutServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\book\ViewBookDetailServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\shoppingcart\ShoppingCart.java
@@ -51,6 +55,7 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\us
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\CreateBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\CreateCustomerServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\HomeServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\PaymentServices.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\JpaDAO.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\order\AddBookToOrderServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\dao\ReviewDAO.java
@@ -69,6 +74,7 @@ E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\services\OrderServi
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\customer\EditCustomerServices.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\entity\Users.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\review\UpdateReviewServlet.java
+E:\FinalProject\BookStoreWebsite\src\main\java\com\murach\util\EmailUtil.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\EditBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\admin\book\ListBookServlet.java
 E:\FinalProject\BookStoreWebsite\src\main\java\com\bookstore\controller\frontend\shoppingcart\ShopingCart.java
